@@ -1,39 +1,82 @@
 # 🧮 Smart Calculator
 
-A clean, modern, responsive full-stack Python web application that performs basic and advanced mathematical calculations, validates user input, handles errors gracefully, maintains runtime calculation history, and is deployment-ready for GitHub and Render.
+A clean, modern, and responsive web-based calculator built with Python and Flask. It performs basic and advanced mathematical calculations, validates user input, handles errors gracefully, and maintains calculation history during the application runtime.
+
+## 🌐 Live Demo
+
+👉 [Open Smart Calculator](https://simple-calculator-nsv5.onrender.com/)
+
+## 📂 GitHub Repository
+
+👉 [View Source Code on GitHub](https://github.com/misbba/Simple-Calculator-)
 
 ---
 
 ## 📌 Project Overview
 
-**Smart Calculator** is built using Python 3 and Flask on the backend with vanilla HTML5, CSS3, and JavaScript on the frontend. It is designed to be beginner-friendly, highly accessible, and visually impressive. The application operates without requiring a database, storing calculation history in-memory during application runtime.
+**Smart Calculator** is a responsive web application developed using Python 3 and Flask for the backend, with HTML5, CSS3, and JavaScript for the frontend.
+
+The application provides a simple and user-friendly interface for performing mathematical calculations. It includes input validation, error handling, calculation history, and responsive design for desktop, tablet, and mobile devices.
+
+The application does not require a database. Calculation history is maintained in memory during the application runtime.
 
 ---
 
 ## ✨ Features
 
-- **Basic Operations**: Addition (`+`), Subtraction (`-`), Multiplication (`×`), Division (`÷`)
-- **Advanced Operations**: 
-  - Modulus (`%`)
-  - Power (`^`)
-  - Floor Division (`//`)
-  - Square Root (`√`)
-  - Percentage (`% of`, e.g. 10% of 500 = 50)
-- **Decimal Precision Handling**: Formats results neatly (e.g. `30.0` displays as `30`).
-- **Robust Input Validation**: Validates empty inputs, invalid character inputs, and out-of-range operations.
-- **Graceful Error Handling**: Displays friendly messages for division by zero, negative square roots, etc.
-- **Calculation History**: Maintains a live log of calculations performed during the runtime session.
-- **Clear History Feature**: Allows users to clear calculation history with confirmation.
-- **Responsive UI**: Glassmorphic dark card design optimized for Mobile, Tablet, and Desktop screens.
+### Basic Operations
+
+* ➕ Addition (`+`)
+* ➖ Subtraction (`-`)
+* ✖️ Multiplication (`×`)
+* ➗ Division (`÷`)
+
+### Advanced Operations
+
+* % Modulus (`%`)
+* 🔢 Power (`^`)
+* ➗ Floor Division (`//`)
+* √ Square Root (`√`)
+* 📊 Percentage (`% of`)
+
+### Additional Features
+
+* Decimal number support
+* Clean result formatting
+* Input validation
+* Error handling
+* Calculation history
+* Clear history functionality
+* Responsive user interface
+* Mobile, tablet, and desktop support
+* Modern glassmorphic UI design
+* Beginner-friendly Python and Flask architecture
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Backend**: Python 3, Flask
-- **WSGI Production Server**: Gunicorn
-- **Frontend**: HTML5, CSS3 (Vanilla Design System), JavaScript (ES6 Fetch API)
-- **Deployment Targets**: GitHub, Render
+### Backend
+
+* Python 3
+* Flask
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* Fetch API
+
+### Testing
+
+* Python unittest
+
+### Deployment
+
+* GitHub
+* Render
+* Gunicorn
 
 ---
 
@@ -42,137 +85,204 @@ A clean, modern, responsive full-stack Python web application that performs basi
 ```text
 SmartCalculator/
 │
-├── app.py              # Flask server, routes, request parsing, history state
-├── calculator.py       # Core mathematical operations & result formatting functions
-├── test_calculator.py  # Unit tests for mathematics logic and edge cases
-├── requirements.txt    # Python dependencies (Flask, Gunicorn)
-├── .gitignore          # Excludes temporary files, pycache, and virtual environments
-├── README.md           # Project documentation and deployment guide
+├── app.py
+├── calculator.py
+├── test_app.py
+├── test_calculator.py
+├── requirements.txt
+├── .gitignore
+├── README.md
 │
 ├── templates/
-│   └── index.html      # Semantic HTML5 template with calculator UI layout
+│   └── index.html
 │
 └── static/
-    ├── style.css       # Custom modern CSS styles, animations, and media queries
-    └── script.js       # Client-side JavaScript for AJAX requests & dynamic UI
+    ├── style.css
+    └── script.js
 ```
+
+### File Description
+
+| File                   | Description                                                |
+| ---------------------- | ---------------------------------------------------------- |
+| `app.py`               | Flask application, routes, requests, and application logic |
+| `calculator.py`        | Mathematical operations and result formatting              |
+| `test_app.py`          | Tests for Flask application functionality                  |
+| `test_calculator.py`   | Unit tests for calculator operations                       |
+| `requirements.txt`     | Required Python packages                                   |
+| `.gitignore`           | Files excluded from Git                                    |
+| `README.md`            | Project documentation                                      |
+| `templates/index.html` | Calculator web interface                                   |
+| `static/style.css`     | Website styling and responsive design                      |
+| `static/script.js`     | Frontend interactions and API requests                     |
 
 ---
 
 ## ⚙️ Installation
 
-Follow these beginner-friendly steps to set up the project on your local Windows computer:
+Follow these steps to run the project locally on Windows.
 
-1. **Open your terminal or command prompt** inside the project folder:
-   ```cmd
-   cd SmartCalculator
-   ```
+### 1. Clone the repository
 
-2. **Create a virtual environment**:
-   ```cmd
-   python -m venv venv
-   ```
+```bash
+git clone https://github.com/misbba/Simple-Calculator-.git
+```
 
-3. **Activate the virtual environment**:
-   - On Windows (Command Prompt):
-     ```cmd
-     venv\Scripts\activate
-     ```
-   - On Windows (PowerShell):
-     ```powershell
-     .\venv\Scripts\Activate.ps1
-     ```
+### 2. Open the project folder
 
-4. **Install the required packages**:
-   ```cmd
-   pip install -r requirements.txt
-   ```
+```bash
+cd Simple-Calculator-
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+For Windows Command Prompt:
+
+```bash
+venv\Scripts\activate
+```
+
+For Windows PowerShell:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## ▶️ Running the Application
 
-Start the Flask development web server:
+Start the Flask development server:
 
-```cmd
+```bash
 python app.py
 ```
 
-Once started, open your web browser and navigate to:
-[http://127.0.0.1:5000](http://127.0.0.1:5000)
+Then open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
 
 ---
 
 ## 🧪 Testing
 
 ### Automated Unit Tests
-Run the included unit test suite to verify all mathematical functions and error states:
 
-```cmd
+Run the calculator unit tests:
+
+```bash
 python -m unittest test_calculator.py
 ```
 
-### Manual Test Cases & Expected Results
+Run the application tests:
 
-| First Number | Second Number | Operation | Expected Result |
-| :--- | :--- | :--- | :--- |
-| `10` | `20` | Addition (`+`) | `30` |
-| `20` | `5` | Subtraction (`-`) | `15` |
-| `5` | `4` | Multiplication (`×`) | `20` |
-| `20` | `5` | Division (`÷`) | `4` |
-| `10` | `3` | Modulus (`%`) | `1` |
-| `2` | `5` | Power (`^`) | `32` |
-| `20` | `3` | Floor Division (`//`) | `6` |
-| `25` | *(Disabled)* | Square Root (`√`) | `5` |
-| `10` | `500` | Percentage (`% of`) | `50` |
-
-### Error Handling Verification
-- `10 ÷ 0` → Displays *"Cannot divide by zero."*
-- `10 % 0` → Displays *"Cannot calculate modulus with zero."*
-- `10 // 0` → Displays *"Cannot perform floor division by zero."*
-- `√(-25)` → Displays *"Cannot calculate the square root of a negative number."*
-- `(empty input)` → Displays *"Please enter a valid number."*
+```bash
+python -m unittest test_app.py
+```
 
 ---
 
-## 🌐 GitHub & Deployment Guide
+## 📊 Manual Test Cases
 
-### Step 1: Upload to GitHub
+| First Number | Second Number | Operation             | Expected Result |
+| -----------: | ------------: | --------------------- | --------------: |
+|           10 |            20 | Addition (`+`)        |              30 |
+|           20 |             5 | Subtraction (`-`)     |              15 |
+|            5 |             4 | Multiplication (`×`)  |              20 |
+|           20 |             5 | Division (`÷`)        |               4 |
+|           10 |             3 | Modulus (`%`)         |               1 |
+|            2 |             5 | Power (`^`)           |              32 |
+|           20 |             3 | Floor Division (`//`) |               6 |
+|           25 |             — | Square Root (`√`)     |               5 |
+|           10 |           500 | Percentage (`% of`)   |              50 |
 
-Initialize your repository and push to GitHub using the following Git commands:
+---
 
-```cmd
-git init
-git add .
-git commit -m "Initial Smart Calculator project"
-git branch -M main
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
-git push -u origin main
+## ⚠️ Error Handling
+
+The application safely handles invalid operations and user inputs.
+
+| Test Case     | Expected Response                                     |
+| ------------- | ----------------------------------------------------- |
+| `10 ÷ 0`      | Cannot divide by zero                                 |
+| `10 % 0`      | Cannot calculate modulus with zero                    |
+| `10 // 0`     | Cannot perform floor division by zero                 |
+| `√(-25)`      | Cannot calculate the square root of a negative number |
+| Empty input   | Please enter a valid number                           |
+| Invalid input | Please enter a valid number                           |
+
+---
+
+## 🌐 Deployment
+
+The application is deployed using **Render**.
+
+### Build Command
+
+```text
+pip install -r requirements.txt
 ```
-*(Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository link)*
 
-### Step 2: Deploy to Render
+### Start Command
 
-1. Log in to [Render](https://render.com/).
-2. Click **New +** → select **Web Service**.
-3. Connect your GitHub repository.
-4. Fill in the deployment parameters:
-   - **Name**: `smart-calculator`
-   - **Environment**: `Python 3`
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `gunicorn app:app`
-5. Click **Create Web Service**.
+```text
+gunicorn app:app
+```
 
-**Live Demo**:
-[Add Render URL after deployment]
+### Environment Variables
+
+No environment variables are required for the current version of the application.
+
+### Live Application
+
+👉 [Open the Live Smart Calculator](https://simple-calculator-nsv5.onrender.com/)
+
+---
+
+## 🔗 Project Links
+
+**GitHub Repository:**
+https://github.com/misbba/Simple-Calculator-
+
+**Live Application:**
+https://simple-calculator-nsv5.onrender.com/
 
 ---
 
 ## 🚀 Future Enhancements
 
-- 🔬 Scientific calculator mode (trigonometry, logarithms)
-- 🌙 Dark / Light theme switcher
-- 💾 Persistent history storage using a database (SQLite / PostgreSQL)
-- ⌨️ Full physical keyboard shortcut support
-- 📏 Unit converter module (length, weight, temperature)
-- 💱 Live currency exchange rate converter
+* 🔬 Scientific calculator mode
+* Trigonometric functions
+* Logarithmic calculations
+* 🌙 Dark / Light theme switcher
+* 💾 Persistent calculation history
+* ⌨️ Full physical keyboard support
+* 📏 Unit converter
+* 💱 Live currency exchange rate converter
+* 📱 Progressive Web App support
+
+---
+
+## 👩‍💻 Author
+
+**Misbbahoonnishaa A**
+
+Developed as a Python and Flask web application project.
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository and try the live application.
